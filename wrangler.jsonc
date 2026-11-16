@@ -1,11 +1,6 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "nav",
-  "compatibility_date": "2026-11-13",
-  "observability": {
-    "enabled": true
-  },
-  "assets": {
-    "directory": "public"
-  }
+  "name": "winv-nav",
+  "compatibility_date": "2026-11-01",
+  "assets": { "directory": "./public" },
+  "routes": [{ "pattern": "nav.winv.cc", "custom_domain": true }]
 }
