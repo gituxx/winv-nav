@@ -1,0 +1,42 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WinV 导航 · 我的 AI 小项目</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>">
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--fg:#e2e8f0;--mut:#94a3b8;--ac:#38bdf8}
+@media(prefers-color-scheme:light){:root{--bg:#f1f5f9;--card:#fff;--fg:#0f172a;--mut:#64748b;--ac:#0284c7}}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"PingFang SC",sans-serif;background:var(--bg);color:var(--fg)}
+header{text-align:center;padding:48px 16px 16px}h1{margin:0;font-size:2rem}header p{color:var(--mut)}
+#q{width:min(560px,90%);padding:12px 16px;border-radius:12px;border:1px solid #33415588;background:var(--card);color:var(--fg);font-size:1rem;margin-top:12px}
+main{max-width:1100px;margin:auto;padding:16px}h2{font-size:1.1rem;color:var(--mut);margin:28px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+a.c{display:block;background:var(--card);border-radius:14px;padding:16px;text-decoration:none;color:inherit;border:1px solid transparent;transition:.2s}
+a.c:hover{border-color:var(--ac);transform:translateY(-2px)}a.c b{display:block;margin-bottom:6px}a.c span{color:var(--mut);font-size:.88rem;line-height:1.4}
+a.c i{font-style:normal;font-size:1.4rem;margin-right:6px}footer{text-align:center;color:var(--mut);padding:32px;font-size:.85rem}
+</style></head><body>
+<header><h1>🧭 WinV 导航</h1><p>用 AI 做的一些小项目，部署在 Cloudflare 免费资源上</p><input id="q" placeholder="搜索项目…" autofocus></header>
+<main id="m"></main>
+<footer>© <span id="y"></span> winv.cc · Hosted on Cloudflare Pages · <a style="color:var(--ac)" href="https://github.com/gituxx/winv-nav">源码</a></footer>
+<script>
+const D=[
+["🎬 影音",[
+["📺","LibreTV","免密码观看、TVBox 订阅、豆瓣推荐、换源测速","https://libretv.oinnn.top/"],
+["🎞️","KVideo","基于每日 TVBox 订阅的视频站","https://kvideo.oinnn.top/"],
+["🍿","OuonnkiTV","与上游同步的自动部署影视站","https://ouonnkitv.oinnn.top/"],
+["🎥","视映 Video","在线视频站","https://video.oinnn.top/"],
+["📡","TVBox API","去重聚合的 TVBox 订阅源备份","https://tvbox.oinnn.top/"]]],
+["🛠️ 工具",[
+["🌐","NodeScope","开源节点聚合仪表盘","https://node.winv.cc/"],
+["📚","Book","书籍 / 阅读站","https://book.winv.cc/"],
+["✅","WorkBuddy Checkin","多账号签到面板（Workers + D1）","https://checkin.oinnn.top/"]]],
+["🤖 开源 · OpenClaw",[
+["🧩","OpenClaw Skills","OpenClaw 自定义技能集合","https://github.com/gituxx/openclaw-skills"],
+["🩺","OpenClaw Self-Healing","Gateway 三层自愈架构方案","https://github.com/gituxx/openclaw-self-healing"],
+["👔","Subagent Supervisor","PM 式子代理监督技能","https://github.com/gituxx/openclaw-subagent-supervisor"],
+["🔁","Autonomous Coordinator","保证 Agent 持续自主运行","https://github.com/gituxx/autonomous-coordinator-skill"],
+["🔌","Sub2API Guide","OpenClaw 接入 Sub2API 指南","https://github.com/gituxx/openclaw-sub2api-guide"],
+["🔑","OpenAI Codex Hub","多账号 ChatGPT OAuth 中转站","https://github.com/gituxx/openai-codex-hub"],
+["📖","Moltbook Chronicles","AI Agent 的 Moltbook 之旅","https://github.com/gituxx/moltbook-chronicles"]]]];
+const m=document.getElementById('m'),q=document.getElementById('q');
+function r(k=''){k=k.toLowerCase();m.innerHTML=D.map(([t,l])=>{l=l.filter(x=>(x[1]+x[2]).toLowerCase().includes(k));return l.length?`<h2>${t}</h2><div class=grid>${l.map(([i,n,d,u])=>`<a class=c href="${u}" target=_blank rel=noopener><b><i>${i}</i>${n}</b><span>${d}</span></a>`).join('')}</div>`:''}).join('')}
+q.oninput=()=>r(q.value);r();document.getElementById('y').textContent=new Date().getFullYear();
+</script></body></html>
