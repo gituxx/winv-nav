@@ -27,15 +27,7 @@ const D=[
 ["🛠️ 工具",[
 ["🌐","NodeScope","开源节点聚合仪表盘","https://node.winv.cc/"],
 ["📚","Book","书籍 / 阅读站","https://book.winv.cc/"],
-["✅","WorkBuddy Checkin","多账号签到面板（Workers + D1）","https://checkin.oinnn.top/"]]],
-["🤖 开源 · OpenClaw",[
-["🧩","OpenClaw Skills","OpenClaw 自定义技能集合","https://github.com/gituxx/openclaw-skills"],
-["🩺","OpenClaw Self-Healing","Gateway 三层自愈架构方案","https://github.com/gituxx/openclaw-self-healing"],
-["👔","Subagent Supervisor","PM 式子代理监督技能","https://github.com/gituxx/openclaw-subagent-supervisor"],
-["🔁","Autonomous Coordinator","保证 Agent 持续自主运行","https://github.com/gituxx/autonomous-coordinator-skill"],
-["🔌","Sub2API Guide","OpenClaw 接入 Sub2API 指南","https://github.com/gituxx/openclaw-sub2api-guide"],
-["🔑","OpenAI Codex Hub","多账号 ChatGPT OAuth 中转站","https://github.com/gituxx/openai-codex-hub"],
-["📖","Moltbook Chronicles","AI Agent 的 Moltbook 之旅","https://github.com/gituxx/moltbook-chronicles"]]]];
+["✅","WorkBuddy Checkin","多账号签到面板（Workers + D1）","https://checkin.oinnn.top/"]]]];
 const m=document.getElementById('m'),q=document.getElementById('q');
 function r(k=''){k=k.toLowerCase();m.innerHTML=D.map(([t,l])=>{l=l.filter(x=>(x[1]+x[2]).toLowerCase().includes(k));return l.length?`<h2>${t}</h2><div class=grid>${l.map(([i,n,d,u])=>`<a class=c href="${u}" target=_blank rel=noopener><b><i>${i}</i>${n}</b><span>${d}</span></a>`).join('')}</div>`:''}).join('')}
 q.oninput=()=>r(q.value);r();document.getElementById('y').textContent=new Date().getFullYear();
