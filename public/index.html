@@ -19,15 +19,15 @@ a.c i{font-style:normal;font-size:1.4rem;margin-right:6px}footer{text-align:cent
 <script>
 const D=[
 ["🎬 影音",[
-["📺","LibreTV","免密码观看、TVBox 订阅、豆瓣推荐、换源测速","https://libretv.oinnn.top/"],
-["🎞️","KVideo","基于每日 TVBox 订阅的视频站","https://kvideo.oinnn.top/"],
-["🍿","OuonnkiTV","与上游同步的自动部署影视站","https://ouonnkitv.oinnn.top/"],
-["🎥","视映 Video","在线视频站","https://video.oinnn.top/"],
-["📡","TVBox API","去重聚合的 TVBox 订阅源备份","https://tvbox.oinnn.top/"]]],
+["📺","LibreTV","免密码观看、TVBox 订阅、豆瓣推荐、换源测速","https://libretv.winv.cc/"],
+["🎞️","KVideo","基于每日 TVBox 订阅的视频站","https://kshiying.winv.cc/"],
+["🍿","OuonnkiTV","与上游同步的自动部署影视站","https://ouonnkitv.winv.cc/"],
+["🎥","视映 Video","在线视频站","https://shiying.winv.cc/"],
+["📡","TVBox API","去重聚合的 TVBox 订阅源备份","https://tvbox.winv.cc/"]]],
 ["🛠️ 工具",[
 ["🌐","NodeScope","开源节点聚合仪表盘","https://node.winv.cc/"],
 ["📚","Book","书籍 / 阅读站","https://book.winv.cc/"],
-["✅","WorkBuddy Checkin","多账号签到面板（Workers + D1）","https://checkin.oinnn.top/"]]]];
+["✅","WorkBuddy Checkin","多账号签到面板（Workers + D1）","https://checkin.winv.cc/"]]]];
 const m=document.getElementById('m'),q=document.getElementById('q');
 function r(k=''){k=k.toLowerCase();m.innerHTML=D.map(([t,l])=>{l=l.filter(x=>(x[1]+x[2]).toLowerCase().includes(k));return l.length?`<h2>${t}</h2><div class=grid>${l.map(([i,n,d,u])=>`<a class=c href="${u}" target=_blank rel=noopener><b><i>${i}</i>${n}</b><span>${d}</span></a>`).join('')}</div>`:''}).join('')}
 q.oninput=()=>r(q.value);r();document.getElementById('y').textContent=new Date().getFullYear();
