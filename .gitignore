@@ -1,0 +1,5 @@
+CREDENTIALS.local.md
+*.local.md
+.wrangler/
+node_modules/
+.DS_Store
